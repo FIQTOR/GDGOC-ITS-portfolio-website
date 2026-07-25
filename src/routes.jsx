@@ -26,14 +26,6 @@ export default function WebRoutes() {
 }
 
 const Layout = ({ children }) => {
-    let blonArr = [];
-    for (let index = 0; index < 20; index++) {
-        blonArr.push(0);
-    }
-
-    function getRandomArbitrary(min, max) {
-        return Math.random() * (max - min) + min;
-    }
     return (
         <div>
             {children}
