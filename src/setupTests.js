@@ -4,20 +4,19 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// jsdom does not implement IntersectionObserver, which Framer Motion's
-// `whileInView` relies on. Provide a minimal no-op mock so components
-// using scroll-reveal animations can render in tests.
-class IntersectionObserverMock {
-  constructor(callback) {
-    this.callback = callback;
-  }
+// jsdom does not implement IntersectionObserver, which is required by both
+// framer-motion's `whileInView` and our own `useScrollSpy` hook. Provide a
+// minimal no-op polyfill so component tests can render the real page.
+if (typeof global.IntersectionObserver === 'undefined') {
+    class MockIntersectionObserver {
+        constructor() {
+            this.observe = jest.fn();
+            this.unobserve = jest.fn();
+            this.disconnect = jest.fn();
+            this.takeRecords = jest.fn(() => []);
+        }
+    }
 
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
+    global.IntersectionObserver = MockIntersectionObserver;
+    window.IntersectionObserver = MockIntersectionObserver;
 }
-
-global.IntersectionObserver = IntersectionObserverMock;
