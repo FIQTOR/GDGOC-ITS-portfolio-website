@@ -112,7 +112,7 @@ export default function Homepage() {
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity duration-500" />
                             <div className="w-full h-full bg-zinc-900 rounded-full border-2 border-zinc-700/50 overflow-hidden relative z-10 flex items-center justify-center">
                                 <img
-                                    src="/icon.webp" // Replace with actual photo
+                                    src="/icon.webp"
                                     alt="Taufiiqul Hakim"
                                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 />
