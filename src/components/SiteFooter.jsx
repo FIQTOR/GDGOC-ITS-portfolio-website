@@ -16,7 +16,7 @@ export default function SiteFooter() {
                         rel="noreferrer"
                         className="hover:text-zinc-300 transition-colors"
                     >
-                        fiqtor.com
+                        fiqtor.pages.dev
                     </a>
                     . All rights reserved.
                 </p>

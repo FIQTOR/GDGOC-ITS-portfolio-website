@@ -15,7 +15,7 @@ export const profile = {
     email: "taufiq07326@gmail.com",
     github: "https://github.com/FIQTOR",
     linkedin: "https://www.linkedin.com/in/fiqtor",
-    website: "https://fiqtor.com",
+    website: "https://fiqtor.pages.dev",
     avatar: "/icon.webp",
 };
 
@@ -98,7 +98,7 @@ export const projects = [
         description:
             "A real-time interactive 3D particle system using Three.js. This project integrates camera-based hand gesture recognition, allowing users to directly manipulate custom shapes through a seamless and responsive web interface.",
         image: "/img/particle-handtracker.webp",
-        url: "https://fiqtor.com",
+        url: "https://fiqtor.pages.dev",
         tags: [
             { label: "Three.js", accent: true },
             { label: "React" },
